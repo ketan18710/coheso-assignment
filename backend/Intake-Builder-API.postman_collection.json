@@ -1,0 +1,283 @@
+{
+  "info": {
+    "name": "Intake Builder API",
+    "description": "Complete API collection for testing the Intake Builder backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "health"]
+        },
+        "description": "Check if the API is running"
+      }
+    },
+    {
+      "name": "Get All Request Types",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types"]
+        },
+        "description": "Retrieve all request types from the database"
+      }
+    },
+    {
+      "name": "Get Single Request Type (NDA)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/550e8400-e29b-41d4-a716-446655440000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "550e8400-e29b-41d4-a716-446655440000"]
+        },
+        "description": "Get NDA Request - Sales by ID"
+      }
+    },
+    {
+      "name": "Get Single Request Type (MSA)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/550e8400-e29b-41d4-a716-446655440001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "550e8400-e29b-41d4-a716-446655440001"]
+        },
+        "description": "Get MSA Review Request - Procurement by ID"
+      }
+    },
+    {
+      "name": "Create Request Type - Data Privacy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestType\": \"Data Privacy Agreement - Compliance\",\n  \"purpose\": \"Data privacy agreement for compliance team. Use when handling personal data, GDPR compliance, or data processing agreements with third parties.\",\n  \"fields\": [\n    {\n      \"label\": \"Data Controller Name\",\n      \"type\": \"text\",\n      \"required\": true,\n      \"placeholder\": \"Enter organization name\"\n    },\n    {\n      \"label\": \"Type of Data\",\n      \"type\": \"select\",\n      \"required\": true,\n      \"options\": [\"Personal Data\", \"Sensitive Personal Data\", \"Financial Data\", \"Health Data\"]\n    },\n    {\n      \"label\": \"Data Processing Purpose\",\n      \"type\": \"long-text\",\n      \"required\": true,\n      \"placeholder\": \"Describe the purpose of data processing...\"\n    },\n    {\n      \"label\": \"Agreement Start Date\",\n      \"type\": \"date\",\n      \"required\": true\n    },\n    {\n      \"label\": \"GDPR Compliance Required\",\n      \"type\": \"select\",\n      \"required\": true,\n      \"options\": [\"Yes\", \"No\"]\n    }\n  ],\n  \"owner\": \"compliance@company.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types"]
+        },
+        "description": "Create a new Data Privacy Agreement request type"
+      }
+    },
+    {
+      "name": "Create Request Type - Simple Example",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestType\": \"Consulting Agreement - Professional Services\",\n  \"purpose\": \"Standard consulting agreement for engaging external consultants or professional service providers.\",\n  \"fields\": [\n    {\n      \"label\": \"Consultant Name\",\n      \"type\": \"text\",\n      \"required\": true\n    },\n    {\n      \"label\": \"Service Description\",\n      \"type\": \"long-text\",\n      \"required\": true\n    },\n    {\n      \"label\": \"Start Date\",\n      \"type\": \"date\",\n      \"required\": true\n    }\n  ],\n  \"owner\": \"procurement@company.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types"]
+        },
+        "description": "Create a simple consulting agreement request type"
+      }
+    },
+    {
+      "name": "Update Request Type - Change Owner",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owner\": \"legal-team@company.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/550e8400-e29b-41d4-a716-446655440000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "550e8400-e29b-41d4-a716-446655440000"]
+        },
+        "description": "Update only the owner email of NDA Request"
+      }
+    },
+    {
+      "name": "Update Request Type - Change Purpose",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"purpose\": \"Updated purpose: Request to establish a sales NDA for protecting confidential business information during negotiations and partnerships.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/550e8400-e29b-41d4-a716-446655440000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "550e8400-e29b-41d4-a716-446655440000"]
+        },
+        "description": "Update only the purpose field"
+      }
+    },
+    {
+      "name": "Update Request Type - Add New Field",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fields\": [\n    {\n      \"id\": \"field-1\",\n      \"label\": \"Contract Party Name\",\n      \"type\": \"text\",\n      \"required\": true,\n      \"placeholder\": \"Enter the company name\"\n    },\n    {\n      \"id\": \"field-2\",\n      \"label\": \"Contract Effective Date\",\n      \"type\": \"date\",\n      \"required\": true\n    },\n    {\n      \"id\": \"field-3\",\n      \"label\": \"Contract Duration\",\n      \"type\": \"select\",\n      \"required\": true,\n      \"options\": [\"1 year\", \"2 years\", \"3 years\", \"5 years\"]\n    },\n    {\n      \"id\": \"field-4\",\n      \"label\": \"Purpose of NDA\",\n      \"type\": \"long-text\",\n      \"required\": true,\n      \"placeholder\": \"Describe the purpose of the NDA...\"\n    },\n    {\n      \"id\": \"field-5\",\n      \"label\": \"Additional Notes\",\n      \"type\": \"long-text\",\n      \"required\": false,\n      \"placeholder\": \"Any additional information...\"\n    },\n    {\n      \"label\": \"Legal Contact Email\",\n      \"type\": \"text\",\n      \"required\": false,\n      \"placeholder\": \"email@example.com\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/550e8400-e29b-41d4-a716-446655440000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "550e8400-e29b-41d4-a716-446655440000"]
+        },
+        "description": "Update fields array - adds a new 'Legal Contact Email' field"
+      }
+    },
+    {
+      "name": "Delete Request Type (Software License)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/8247c71b-250b-4204-9075-3ccb1879870e",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "8247c71b-250b-4204-9075-3ccb1879870e"]
+        },
+        "description": "Delete the Software License Agreement request type"
+      }
+    },
+    {
+      "name": "Validation Error - Empty Request Type",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestType\": \"\",\n  \"purpose\": \"Short\",\n  \"fields\": [],\n  \"owner\": \"invalid-email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types"]
+        },
+        "description": "Test validation - should return 400 with validation errors"
+      }
+    },
+    {
+      "name": "Validation Error - Invalid Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestType\": \"Test Agreement\",\n  \"purpose\": \"This is a test agreement for validation purposes.\",\n  \"fields\": [],\n  \"owner\": \"not-an-email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/request-types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types"]
+        },
+        "description": "Test email validation - should return 400"
+      }
+    },
+    {
+      "name": "404 Error - Non-existent ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/non-existent-id-12345",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "non-existent-id-12345"]
+        },
+        "description": "Test 404 error handling"
+      }
+    },
+    {
+      "name": "404 Error - Delete Non-existent",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/request-types/fake-id-99999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "request-types", "fake-id-99999"]
+        },
+        "description": "Test 404 error on delete"
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,241 @@
+{
+  "requestTypes": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "requestType": "NDA Request - Sales",
+      "purpose": "UPDATED: Request to establish a sales NDA. This is the updated purpose text.",
+      "fields": [
+        {
+          "id": "field-1",
+          "label": "Contract Party Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter the company name"
+        },
+        {
+          "id": "field-2",
+          "label": "Contract Effective Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "field-3",
+          "label": "Contract Duration",
+          "type": "select",
+          "required": true,
+          "options": [
+            "1 year",
+            "2 years",
+            "3 years",
+            "5 years"
+          ]
+        },
+        {
+          "id": "field-4",
+          "label": "Purpose of NDA",
+          "type": "long-text",
+          "required": true,
+          "placeholder": "Describe the purpose of the NDA..."
+        },
+        {
+          "id": "field-5",
+          "label": "Additional Notes",
+          "type": "long-text",
+          "required": false,
+          "placeholder": "Any additional information..."
+        },
+        {
+          "label": "Legal Contact Email",
+          "type": "text",
+          "required": false,
+          "placeholder": "email@example.com",
+          "id": "73662553-89ca-4be3-a344-f4a62035c70e"
+        }
+      ],
+      "owner": "legal@company.com",
+      "createdAt": "2025-10-20T10:30:00.000Z",
+      "updatedAt": "2025-10-23T09:56:44.070Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "requestType": "MSA Review Request - Procurement",
+      "purpose": "Master Service Agreement review for procurement purposes. Use this form when entering into long-term service relationships with vendors or suppliers. The legal team will review the MSA to ensure compliance with company policies and identify potential risks.",
+      "fields": [
+        {
+          "id": "field-6",
+          "label": "Vendor Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter vendor company name"
+        },
+        {
+          "id": "field-7",
+          "label": "Service Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Software Services",
+            "Consulting",
+            "Manufacturing",
+            "Logistics",
+            "Other"
+          ]
+        },
+        {
+          "id": "field-8",
+          "label": "Estimated Contract Value",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g., $50,000"
+        },
+        {
+          "id": "field-9",
+          "label": "Urgency Level",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Low - Review within 2 weeks",
+            "Medium - Review within 1 week",
+            "High - Review within 3 days",
+            "Critical - Review immediately"
+          ]
+        }
+      ],
+      "owner": "procurement@company.com",
+      "createdAt": "2025-10-21T14:15:00.000Z",
+      "updatedAt": "2025-10-21T14:15:00.000Z"
+    },
+    {
+      "id": "8247c71b-250b-4204-9075-3ccb1879870e",
+      "requestType": "Software License Agreement - Software License Agreement ",
+      "purpose": "Software license agreement review for IT department. Use when acquiring new software licenses or renewals.\nSoftware license agreement review for IT department. Use when acquiring new software licenses or renewals.\nSoftware license agreement review for IT department. Use when acquiring new software licenses or renewals.",
+      "fields": [
+        {
+          "id": "62840881-070a-4ab5-ac8e-2ab84600fb38",
+          "label": "Software Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter software name"
+        },
+        {
+          "id": "5d7abde3-b738-44c4-adbe-acc2a4b171a3",
+          "label": "License Type",
+          "type": "select",
+          "required": true,
+          "placeholder": "pl",
+          "options": [
+            "Perpetual",
+            "Subscription",
+            "Enterprise",
+            "Open Source"
+          ]
+        }
+      ],
+      "owner": "it@company.com",
+      "createdAt": "2025-10-23T09:32:48.909Z",
+      "updatedAt": "2025-10-24T19:21:49.072Z"
+    },
+    {
+      "id": "5dcbf4e3-fea0-4194-8944-84b66a7c86b4",
+      "requestType": "tryyyj",
+      "purpose": "fdfdfdsfsdfjdwjfjkwhnfkjdnfjkdhnfjkdhnfdskj try kar",
+      "fields": [
+        {
+          "id": "field-1761316441045",
+          "label": "val1",
+          "type": "date",
+          "required": false,
+          "placeholder": ""
+        },
+        {
+          "id": "field-1761329552557",
+          "label": "val2",
+          "type": "text",
+          "required": true,
+          "placeholder": ""
+        }
+      ],
+      "owner": "ab@ab.co",
+      "createdAt": "2025-10-24T14:09:19.149Z",
+      "updatedAt": "2025-10-24T19:10:13.905Z"
+    },
+    {
+      "id": "57c83add-ed84-4341-b42f-ea833498bc58",
+      "requestType": "hjgjhgjhg",
+      "purpose": "fhgfghfhgfhgfghfhgfhg",
+      "fields": [
+        {
+          "id": "field-1761330485475",
+          "label": "val",
+          "type": "text",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "owner": "ketan18710@gmail.com",
+      "createdAt": "2025-10-24T18:28:09.827Z",
+      "updatedAt": "2025-10-24T18:28:09.827Z"
+    },
+    {
+      "id": "1a25d5dd-70d7-4c26-8a35-7877759568f8",
+      "requestType": "Data Privacy Agreement - Compliance",
+      "purpose": "Data privacy agreement for compliance team. Use when handling personal data, GDPR compliance, or data processing agreements with third parties.",
+      "fields": [
+        {
+          "label": "Data Controller Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter organization name",
+          "id": "737411cb-04af-449b-82bd-e8a3f0c7ba7a"
+        },
+        {
+          "label": "Type of Data",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Personal Data",
+            "Sensitive Personal Data",
+            "Financial Data",
+            "Health Data"
+          ],
+          "id": "d2bbccf1-aff4-42fe-9962-1745b8f27278"
+        },
+        {
+          "label": "Data Processing Purpose",
+          "type": "long-text",
+          "required": true,
+          "placeholder": "Describe the purpose of data processing...",
+          "id": "c2308b74-fd1b-4ed4-b078-70f8ccf606c1"
+        },
+        {
+          "label": "Agreement Start Date",
+          "type": "date",
+          "required": true,
+          "id": "70931e71-4121-4b98-b270-1bc1f14c035d"
+        },
+        {
+          "label": "GDPR Compliance Required",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "id": "188ce9e6-ef2d-4b0f-8d9f-874781d3105d"
+        }
+      ],
+      "owner": "compliance@company.com",
+      "createdAt": "2025-10-24T18:51:48.833Z",
+      "updatedAt": "2025-10-24T18:51:48.833Z"
+    },
+    {
+      "id": "942f3824-b3af-4dbb-870f-db2c092d1c31",
+      "requestType": "new",
+      "purpose": "sadasdkskjsndf",
+      "fields": [],
+      "owner": "dsfsd@sda.kk",
+      "createdAt": "2025-10-24T18:55:39.562Z",
+      "updatedAt": "2025-10-24T18:55:39.562Z"
+    }
+  ]
+}
