@@ -5,7 +5,12 @@ import requestTypesRouter from './routes/requestTypes.js';
 const app: Application = express();
 
 // Middleware
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({
+  origin: true, // Allow all origins
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+})); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 

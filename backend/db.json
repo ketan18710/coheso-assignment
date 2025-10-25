@@ -230,12 +230,48 @@
     },
     {
       "id": "942f3824-b3af-4dbb-870f-db2c092d1c31",
-      "requestType": "new",
+      "requestType": "neww",
       "purpose": "sadasdkskjsndf",
       "fields": [],
       "owner": "dsfsd@sda.kk",
       "createdAt": "2025-10-24T18:55:39.562Z",
-      "updatedAt": "2025-10-24T18:55:39.562Z"
+      "updatedAt": "2025-10-25T08:58:35.229Z"
+    },
+    {
+      "id": "88a25d2b-e3c1-4249-8d5f-124e4fe159fa",
+      "requestType": "Test",
+      "purpose": "Testing POST endpoint",
+      "fields": [],
+      "owner": "test@example.com",
+      "createdAt": "2025-10-25T09:07:19.182Z",
+      "updatedAt": "2025-10-25T09:07:19.182Z"
+    },
+    {
+      "id": "b6c72b80-0d08-4645-8afc-419fe257e65a",
+      "requestType": "Test Request",
+      "purpose": "This is a test to verify CORS works",
+      "fields": [],
+      "owner": "test@example.com",
+      "createdAt": "2025-10-25T09:07:40.704Z",
+      "updatedAt": "2025-10-25T09:07:40.704Z"
+    },
+    {
+      "id": "71375028-7d89-40d9-b42d-7a9844eb26b5",
+      "requestType": "CORS Test",
+      "purpose": "Testing that POST works with CORS",
+      "fields": [],
+      "owner": "test@example.com",
+      "createdAt": "2025-10-25T09:07:51.750Z",
+      "updatedAt": "2025-10-25T09:07:51.750Z"
+    },
+    {
+      "id": "cedeefb2-2f53-481b-a248-e85cc7d65149",
+      "requestType": "Local Test",
+      "purpose": "Testing local file system works",
+      "fields": [],
+      "owner": "test@example.com",
+      "createdAt": "2025-10-25T09:12:16.139Z",
+      "updatedAt": "2025-10-25T09:12:16.139Z"
     }
   ]
 }
