@@ -1,8 +1,8 @@
 import { Router, Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import { z } from 'zod';
-import * as db from '../utils/db';
-import { RequestType, CreateRequestTypeInput } from '../types';
+import * as db from '../utils/db.js';
+import { RequestType, CreateRequestTypeInput } from '../types/index.js';
 
 const router = Router();
 

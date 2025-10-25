@@ -1,6 +1,6 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import requestTypesRouter from './routes/requestTypes';
+import requestTypesRouter from './routes/requestTypes.js';
 
 const app: Application = express();
 const PORT = process.env.PORT || 3001;
