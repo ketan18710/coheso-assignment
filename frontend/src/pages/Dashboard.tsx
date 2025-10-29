@@ -46,12 +46,12 @@ export function Dashboard() {
     setDeleting(true);
     try {
       await deleteRequestType(selectedRequestType.id);
-      toast.success('Request type deleted successfully');
       setDeleteDialogOpen(false);
       setSelectedRequestType(null);
     } catch (error) {
       toast.error('Failed to delete request type');
     } finally {
+      toast.success('Request type deleted successfully');
       setDeleting(false);
     }
   };
